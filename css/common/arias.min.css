@@ -1,0 +1,247 @@
+.arias-block {
+  display: flex;
+}
+
+.arias-block__left {
+  width: 40%;
+  background: #eaf4f6;
+  padding: 15px;
+}
+
+.arias-block__right {
+  width: 60%;
+  display: flex;
+  padding: 15px 15px 15px 70px;
+}
+
+.arias-block__col {
+  width: 40%;
+}
+
+.arias-block__col:first-child {
+  margin-right: 50px;
+}
+
+.arias-block__row {
+  padding-left: 15px;
+  margin-bottom: 40px;
+}
+
+.arias-block__main-caption {
+  font-size: 28px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.arias-block__caption {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 991px) {
+  .arias-block__caption {
+    font-size: 18px;
+  }
+}
+
+.arias-block__caption:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #41b7c4;
+  left: -10px;
+  top: 5px;
+  transform: translate(-50%);
+}
+
+.arias-block__caption_list {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.arias-block__caption_list:after {
+  display: none;
+}
+
+.arias-block_right-side .arias-block__left {
+  order: 2;
+}
+
+.work-arias {
+  padding: 40px 0;
+}
+
+.work-arias-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 991px) {
+  .work-arias-tabs {
+    flex-direction: row;
+  }
+}
+
+.work-arias-tabs__header {
+  margin-right: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.work-arias-tabs__list {
+  font-size: 16px;
+  color: #55789c;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 767px) {
+  .work-arias-tabs__list {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .work-arias-tabs__list {
+    border: none;
+  }
+}
+
+.work-arias-tabs__item {
+  border: 1px solid #00346a;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 0;
+}
+
+@media screen and (min-width: 991px) {
+  .work-arias-tabs__item {
+    border: none;
+    width: initial;
+  }
+}
+
+.work-arias-tabs__link {
+  padding: 20px 20px 20px 30px;
+  cursor: pointer;
+  color: #00346a;
+  transition: all 0.3s;
+  display: block;
+  font-weight: 700;
+  position: relative;
+}
+
+.work-arias-tabs__link:before,
+.work-arias-tabs__link:after {
+  content: '';
+  display: block;
+  width: 11px;
+  height: 2px;
+  background: #00346a;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+}
+
+.work-arias-tabs__link:after {
+  transform: rotate(-90deg);
+}
+
+@media screen and (min-width: 991px) {
+  .work-arias-tabs__link {
+    max-width: 350px;
+    color: #55789c;
+    font-weight: 400;
+  }
+  .work-arias-tabs__link:after,
+  .work-arias-tabs__link:before {
+    display: none;
+  }
+}
+
+.active-item .work-arias-tabs__link {
+  background: rgba(0, 52, 106, 0.17);
+}
+
+@media screen and (min-width: 991px) {
+  .work-arias-tabs__link:hover,
+  .active-item .work-arias-tabs__link {
+    padding-left: 20px;
+    color: #00346a;
+    font-weight: 700;
+    background: transparent;
+  }
+}
+
+.work-arias-tabs__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 30px;
+  color: #00346a;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+}
+
+@media screen and (min-width: 991px) {
+  .work-arias-tabs__content {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: calc(100% - 370px);
+    padding: 0;
+    max-height: initial;
+    overflow: initial;
+    height: initial;
+    display: none;
+  }
+}
+
+.active-item .work-arias-tabs__content {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 0 0;
+}
+
+@media screen and (min-width: 991px) {
+  .active-item .work-arias-tabs__content {
+    margin: 0;
+  }
+}
+
+.work-arias__row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 767px) {
+  .work-arias__row {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .work-arias__row {
+    margin-bottom: 30px;
+  }
+}
+
+.work-arias__col {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 767px) {
+  .work-arias__col {
+    width: calc(50% - 20px);
+    margin-bottom: 0;
+  }
+}
