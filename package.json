@@ -1,0 +1,65 @@
+{
+    "name": "gulpbuild4",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "presets": [
+        "@babel/preset-es2016"
+    ],
+    "browserslist": [
+        "> 0.25%",
+        "not dead"
+    ],
+    "dependencies": {
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-rename": "^2.0.0",
+        "gulp-stylelint": "^13.0.0",
+        "imagemin-jpeg-recompress": "^7.0.0",
+        "lint-staged": "^10.2.11",
+        "node-sass": "^4.14.1",
+        "normalize.css": "^8.0.1",
+        "stylelint": "^13.5.0",
+        "stylelint-scss": "^3.17.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.6",
+        "@babel/preset-env": "^7.9.6",
+        "babel-preset-es2016": "^6.24.1",
+        "browser-sync": "^2.26.7",
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-csscomb": "^3.1.0",
+        "gulp-eslint": "^6.0.0",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rigger": "^0.5.8",
+        "gulp-sass": "^4.1.0",
+        "husky": "^4.2.5",
+        "stylelint-config-standard": "^20.0.0"
+    },
+    "scripts": {
+        "stylelint-fix": "stylelint ./src/components/**/*.scss --fix --syntax scss",
+        "eslint-fix": "eslint ./src/components/**/*.js --fix",
+        "test": "editorconfig-cli && stylelint ./src/styles/**/*.scss --syntax scss && eslint ./src/js",
+        "start": "gulp dev",
+        "build": "gulp build"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.scss": [
+            "stylelint",
+            "git add"
+        ],
+        "*.js": [
+            "eslint",
+            "git add"
+        ]
+    },
+    "author": "",
+    "license": "ISC"
+}

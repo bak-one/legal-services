@@ -1,0 +1,113 @@
+@import '../untils/_variables';
+
+.contact {
+  display: flex;
+  position: relative;
+  background: url('../../images/contact-back.webp') no-repeat 50% / cover;
+  color: $white;
+
+  &_no-webp {
+    background: url('../../images/contact-back.jpg') no-repeat 50% / cover;
+  }
+
+  &:after {
+    background: rgba(0, 52, 106, 0.8);
+  }
+
+  &__caption {
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  &__left {
+    justify-content: flex-start;
+    display: none;
+    padding-top: 50px;
+
+    @media screen and (min-width: 991px) {
+      display: flex;
+    }
+  }
+
+  &__right {
+    padding: 50px 20px;
+    z-index: 1;
+    width: 100%;
+
+    @media screen and (min-width: 991px) {
+      width: 55%;
+    }
+  }
+
+  &-info {
+    margin-bottom: 40px;
+
+    &__row {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    &__caption {
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    &__text {
+      margin: 0;
+    }
+  }
+
+  &-form {
+    width: 100%;
+
+    @media screen and (min-width: 991px) {
+      max-width: 600px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-direction: column;
+
+      @media screen and (min-width: 579px) {
+        flex-direction: row;
+      }
+    }
+
+    &__col {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @media screen and (min-width: 579px) {
+        width: calc(50% - 10px);
+      }
+    }
+
+    &__input {
+      width: 100%;
+      padding: 5px 10px;
+    }
+
+    &__fieldset {
+      margin-bottom: 10px;
+
+      @media screen and (min-width: 579px) {
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+
+    &__textarea {
+      line-height: 1;
+    }
+  }
+}
